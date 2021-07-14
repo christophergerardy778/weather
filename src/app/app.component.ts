@@ -24,7 +24,10 @@ export class AppComponent implements OnInit{
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
         this.getWeather(`${position.coords.latitude}, ${position.coords.longitude}`)
-      }, () => this.error = true, {
+      }, error => {
+        this.error = true;
+        alert(error);
+      }, {
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0
