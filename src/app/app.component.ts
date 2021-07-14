@@ -20,13 +20,18 @@ export class AppComponent implements OnInit{
 
   getLocationAndWeather() {
     this.error = false;
-    navigator.geolocation.getCurrentPosition(position => {
-      this.getWeather(`${position.coords.latitude}, ${position.coords.longitude}`)
-    }, () => this.error = true, {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.getWeather(`${position.coords.latitude}, ${position.coords.longitude}`)
+      }, () => this.error = true, {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      });
+    } else {
+      alert('GEO LOCATION NO SUPPORTED');
+    }
   }
 
   getWeather(location: string) {
