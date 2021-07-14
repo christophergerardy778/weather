@@ -1,0 +1,58 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.title-no-margin {
+  margin: 0;
+}
+
+.font-weight {
+  font-weight: 700;
+}
+
+.mt-4 {
+  margin-top: 24px;
+}
+
+.modified-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 48px;
+  line-height: normal;
+  font-weight: 700
+}
+
+.full-width {
+  min-width: 100%;
+}
+
+.ml-4 {
+  margin-left: 18px;
+}
+
+.error {
+  color: #ff3d3d;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .container {
+    padding: 64px 0;
+  }
+}

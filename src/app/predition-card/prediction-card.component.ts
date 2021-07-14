@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IForecast} from "../models/IForecast";
+import {IForecastDay} from "../models/IForecast";
 
 @Component({
-  selector: 'app-predition-card',
-  templateUrl: './predition-card.component.html',
-  styleUrls: ['./predition-card.component.scss']
+  selector: 'app-prediction-card',
+  templateUrl: './prediction-card.component.html',
+  styleUrls: ['./prediction-card.component.scss']
 })
-export class PreditionCardComponent implements OnInit {
+export class PredictionCardComponent implements OnInit {
 
-  @Input() foreCast!: IForecast;
+  @Input() foreCast!: IForecastDay;
 
   constructor() { }
 

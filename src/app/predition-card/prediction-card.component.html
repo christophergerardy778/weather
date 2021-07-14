@@ -1,1 +1,16 @@
-<p>predition-card works!</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card-content">
+      <img [src]="foreCast.day.condition.icon" [alt]="foreCast.day.condition.text">
+      <div class="card-info">
+        <p class="m-0">
+          {{ foreCast.date | formatDateLocal }}
+        </p>
+
+        <p class="m-0">
+          {{ foreCast.day.condition.text}}: <strong>{{ foreCast.day.avgtemp_c }}°c</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
