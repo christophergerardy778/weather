@@ -22,7 +22,11 @@ export class AppComponent implements OnInit{
     this.error = false;
     navigator.geolocation.getCurrentPosition(position => {
       this.getWeather(`${position.coords.latitude}, ${position.coords.longitude}`)
-    }, () => this.error = true);
+    }, () => this.error = true, {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    });
   }
 
   getWeather(location: string) {
