@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
         this.getWeather(`${position.coords.latitude}, ${position.coords.longitude}`)
       }, error => {
         this.error = true;
-        alert(error);
+        alert(error.message);
       }, {
         enableHighAccuracy: true,
         timeout: 5000,
